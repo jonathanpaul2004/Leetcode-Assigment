@@ -1,0 +1,13 @@
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        int num = mat.length;
+        int sum = 0;
+         for (int index = 0; index < num; index++) {
+            sum += mat[index][index]; 
+             if (index != num-1-index) {
+                sum += mat[index][num-1-index]; 
+            }
+        }
+        return sum;
+    }
+}

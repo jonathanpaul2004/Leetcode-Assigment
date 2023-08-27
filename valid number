@@ -1,0 +1,14 @@
+class Solution {
+    public boolean isNumber(String str) {
+        try{
+            int len = str.length();
+            if(str.equals("Infinity")||str.equals("-Infinity")||str.equals("+Infinity")||str.charAt(len-1)=='f'||str.charAt(len-1)=='d'||str.charAt(len-1)=='D'||str.charAt(len-1)=='F')
+            return false;
+            double d = Double.parseDouble(str);
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
+}

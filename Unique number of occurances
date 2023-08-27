@@ -1,0 +1,12 @@
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        var occCount = new HashMap<Integer, Integer>();
+        for (var i = 0; i < arr.length; ++i) {
+            occCount.put(arr[i], occCount.getOrDefault(arr[i], 0) + 1);
+        }
+
+        var countOcc = new HashSet<Integer>(occCount.values());
+
+        return countOcc.size() == occCount.values().size();
+    }
+}
